@@ -1,292 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SoftGrow Elite Gym</title>
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
-body{
-    overflow-x:hidden;
-    background:linear-gradient(270deg,#a1c4fd,#c2e9fb,#fbc2eb,#a6c1ee);
-    background-size:800% 800%;
-    animation:bgMove 12s ease infinite;
-}
-
-/* BACKGROUND ANIMATION */
-@keyframes bgMove{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
-}
-
-/* NAVBAR */
-nav{
-    display:flex;
-    justify-content:space-between;
-    padding:20px 50px;
-    backdrop-filter:blur(10px);
-    background:rgba(255,255,255,0.2);
-    position:sticky;
-    top:0;
-}
-
-nav h2{
-    color:#ff4d6d;
-}
-
-nav ul{
-    display:flex;
-    list-style:none;
-}
-
-nav ul li{
-    margin-left:25px;
-}
-
-nav ul li a{
-    text-decoration:none;
-    color:#333;
-    font-weight:600;
-    transition:0.3s;
-}
-
-nav ul li a:hover{
-    color:#ff4d6d;
-}
-
-/* HERO */
-.hero{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    color:#333;
-}
-
-.hero h1{
-    font-size:55px;
-    animation:fade 2s ease;
-}
-
-.hero p{
-    margin:10px 0;
-}
-
-.hero button{
-    padding:12px 30px;
-    border:none;
-    border-radius:30px;
-    background:#ff4d6d;
-    color:white;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.hero button:hover{
-    transform:scale(1.15);
-    box-shadow:0 0 20px #ff4d6d;
-}
-
-/* SECTION */
-section{
-    padding:80px 20px;
-    text-align:center;
-}
-
-h2{
-    margin-bottom:40px;
-}
-
-/* GLASS CARDS */
-.container{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-}
-
-.card{
-    width:280px;
-    margin:20px;
-    padding:20px;
-    border-radius:20px;
-    background:rgba(255,255,255,0.3);
-    backdrop-filter:blur(10px);
-    box-shadow:0 10px 30px rgba(0,0,0,0.2);
-    transition:0.4s;
-    opacity:0;
-    transform:translateY(60px);
-}
-
-.card img{
-    width:100%;
-    border-radius:15px;
-}
-
-/* HOVER EFFECT */
-.card:hover{
-    transform:translateY(-15px) scale(1.05);
-    box-shadow:0 0 25px #ff4d6d;
-}
-
-/* PRICE */
-.price{
-    color:#ff4d6d;
-    font-size:22px;
-    margin-top:10px;
-}
-
-/* FLOAT ANIMATION */
-@keyframes float{
-    0%{transform:translateY(0);}
-    50%{transform:translateY(-10px);}
-    100%{transform:translateY(0);}
-}
-
-.hero{
-    animation:float 4s ease-in-out infinite;
-}
-
-/* SHOW ANIMATION */
-.show{
-    opacity:1;
-    transform:translateY(0);
-    transition:1s;
-}
-
-/* FOOTER */
-footer{
-    padding:20px;
-    background:#111;
-    color:white;
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimalCare</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
+<!-- Navbar -->
 <nav>
-    <h2>SoftGrow Elite</h2>
+    <h2>🐾 AnimalCare</h2>
     <ul>
         <li><a href="#home">Home</a></li>
-        <li><a href="#facilities">Facilities</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#plans">Plans</a></li>
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#donate">Donate</a></li>
     </ul>
 </nav>
 
-<section class="hero" id="home">
-    <div>
-        <h1>Transform Your Body 💪</h1>
-        <p>Train Hard • Look Strong • Feel Powerful</p>
-        <button onclick="joinNow()">Join Now</button>
-    </div>
+<!-- Hero -->
+<section id="home" class="hero">
+    <h1>Save Animals ❤️</h1>
+    <p>Be the voice for the voiceless 🐶🐱</p>
+    <button onclick="scrollToSection('donate')">Donate Now</button>
 </section>
 
-<section id="facilities">
-    <h2>Premium Facilities</h2>
-    <div class="container">
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61">
-            <h3>Smart Equipment</h3>
-            <p>AI-powered machines.</p>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f">
-            <h3>Cardio Zone</h3>
-            <p>Next-gen cardio system.</p>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e">
-            <h3>Strength Area</h3>
-            <p>Heavy & advanced training.</p>
-        </div>
-    </div>
+<!-- Mission -->
+<section id="mission" class="fade">
+    <h2>Our Mission</h2>
+    <p>We rescue, protect, and give love to animals in need. Every life matters.</p>
 </section>
 
-<section id="services">
-    <h2>Elite Services</h2>
-    <div class="container">
+<!-- Programs -->
+<section id="programs">
+    <h2>Our Programs</h2>
+
+    <div class="cards">
         <div class="card">
-            <h3>Personal Coaching</h3>
-            <p>1-on-1 expert trainers.</p>
+            <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" height="300" weight="300">
+            <h3>Rescue</h3>
+            <p>Saving animals from danger</p>
         </div>
 
         <div class="card">
-            <h3>Nutrition Plan</h3>
-            <p>Scientific diet plans.</p>
+            <img src="https://cdn-icons-png.flaticon.com/512/1998/1998610.png" height="300" weight="300">
+            <h3>Shelter</h3>
+            <p>Providing safe homes</p>
         </div>
 
         <div class="card">
-            <h3>Yoga & Recovery</h3>
-            <p>Relax & recover faster.</p>
+            <img src="https://cdn-icons-png.flaticon.com/512/616/616430.png" height="300" weight="300">
+            <h3>Adoption</h3>
+            <p>Find loving families</p>
         </div>
     </div>
 </section>
 
-<section id="plans">
-    <h2>Membership Plans</h2>
-    <div class="container">
-        <div class="card">
-            <h3>Basic</h3>
-            <p class="price">₹999/month</p>
-        </div>
-
-        <div class="card">
-            <h3>Standard</h3>
-            <p class="price">₹1999/3 months</p>
-        </div>
-
-        <div class="card">
-            <h3>Premium</h3>
-            <p class="price">₹4999/year</p>
-        </div>
-    </div>
+<!-- Donate -->
+<section id="donate" class="donate">
+    <h2>Support Us 💖</h2>
+    <input type="text" placeholder="Your Name"><br>
+    <input type="email" placeholder="Your Email"><br>
+    <input type="number" placeholder="Amount"><br>
+    <button onclick="donate()">Donate ❤️</button>
 </section>
 
+<!-- Footer -->
 <footer>
-    <p>© 2026 SoftGrow Elite Gym 🔥</p>
+    <p>© 2026 AnimalCare | Made by Mehraj Shaik 🚀</p>
 </footer>
 
-<script>
-// BUTTON
-function joinNow(){
-    alert("🔥 Welcome to Elite Gym 💪");
-}
-
-// SCROLL ANIMATION
-const cards = document.querySelectorAll(".card");
-
-window.addEventListener("scroll", ()=>{
-    cards.forEach(card=>{
-        let top = card.getBoundingClientRect().top;
-
-        if(top < window.innerHeight - 80){
-            card.classList.add("show");
-        }
-    });
-});
-</script>
-
+<script src="script.js"></script>
 </body>
-</html>.card {
-    opacity: 0;
-    transform: translateY(50px);
-}
-
-.show {
-    opacity: 1;
-    transform: translateY(0);
-    transition: 1s;
-}
+</html>
